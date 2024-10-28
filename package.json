@@ -1,0 +1,39 @@
+{
+  "name": "cms-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "engines": {
+    "node": "20.18.0"
+  },
+  "scripts": {
+    "start": "nodemon index.ts",
+    "generate-pg": "npx drizzle-kit generate --config ./configuration/drizzle/local_pg/local_pg.config.ts",
+    "migrate-pg": "tsx ./configuration/drizzle/local_pg/local_pg_migrate.ts",
+    "generate-sqlite": "npx drizzle-kit generate --config ./configuration/drizzle/local_sqlite/local_sqlite.config.ts",
+    "migrate-sqlite": "tsx ./configuration/drizzle/local_sqlite/local_sqlite_migrate.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.35.3",
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7",
+    "passport": "^0.7.0",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5",
+    "tsx": "^4.19.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/express": "^5.0.0",
+    "@types/passport": "^1.0.16",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.26.2",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3"
+  }
+}
